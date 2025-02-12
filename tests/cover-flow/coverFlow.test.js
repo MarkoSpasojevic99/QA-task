@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('Cover Flow - Kupovina novog proizvoda', async ({ page }) => {
+test('Cover Flow', async ({ page }) => {
     await page.goto('https://automaticityacademy.ngrok.app/login');
     await page.fill('#email', 'markospasojevic99@gmail.com'); 
     await page.fill('#password', '1234567'); 
@@ -8,7 +8,8 @@ test('Cover Flow - Kupovina novog proizvoda', async ({ page }) => {
     await page.waitForSelector('#search');
 
     await page.fill('#search', 'Razer BlackWidow V3 Pro Mechanical Gaming Keyboard'); 
-
+   
+    //Ukoliko se desi da test ovde zakoci proveriti da li je artikal mozda OUT OF STOCK (do sada mi se deilo 2x da test koji je prolazio zbog ovoga pada)
     const productName = "Razer BlackWidow V3 Pro Mechanical Gaming Keyboard";
     const productCard = await page.locator('[test-id="product-card"]').filter({ hasText: productName }).first();
     await productCard.waitFor();
@@ -35,7 +36,7 @@ test('Cover Flow - Kupovina novog proizvoda', async ({ page }) => {
     await page.waitForSelector('span:has-text("Next step")');
     await page.click('span:has-text("Next step")');
 
-    await page.click('span:has-text("Next step")');
+    await page.click('span:has-text("Next step")');//necemo popunjavati polja kartice jer ukoliko ih popunimo necemo moci da nastavimo dalje.
     await page.waitForSelector('span:has-text("Place your order!")');
     await page.click('span:has-text("Place your order!")');
 

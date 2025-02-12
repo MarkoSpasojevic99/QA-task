@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('Presretanje API poziva - GET zahtevi', async ({ page }) => {
+test('Get API', async ({ page }) => {
     await page.goto('https://automaticityacademy.ngrok.app/login');
 
     page.on('request', (request) => {
