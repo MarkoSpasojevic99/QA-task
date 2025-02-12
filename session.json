@@ -1,0 +1,47 @@
+{
+  "cookies": [
+    {
+      "name": "XSRF-TOKEN",
+      "value": "eyJpdiI6IlJBZmZROVVndTJFYTY5TmYxQ093c2c9PSIsInZhbHVlIjoiU2k0aUYwY1NRWU5QeEZHblplZUhXSWlwb1FYb1Q1b3poRE44djQyT3dKWEYwWXdGOUFYckcrRktmRWgxZlRCQ1pBQThISUUybjlXbUczcTB0ajRGNUlTQmFWcEQxWFBLeWcramNXcTVVWmNjcmpBTUNkVG1zZkk2bHhxQnZrQWciLCJtYWMiOiI1YWViMzlkZWQwMmNjYjJjNjJjNjE1OTA5ZTUyNGNlNDAxMjBmMzAwMzdhNzNiYzI4ZTY2YmE2ZmM0OGM3MTdhIiwidGFnIjoiIn0%3D",
+      "domain": "automaticityacademy.ngrok.app",
+      "path": "/",
+      "expires": 1739234836.254898,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "academy_ecommerce_app_session",
+      "value": "eyJpdiI6InNuYmJaTVZwUDVyZDZhWE02OXlSK0E9PSIsInZhbHVlIjoiS3FCakx6Myt4a3BTVkV4YjRKUVlpS05ZbXZjNnpWRVljZno5aDdBNW1hWFdlWnlOZkZzUy85bTZiM3J0SWo1NlhDT2lOQ1RPNUtXeSs1OTh4Mks1ZUhmU1d6RHkzNDZsL2luRmxWTU9WY2hDSDlWNUFsK2x2TWFzSlhnSHR3WmEiLCJtYWMiOiIxYzhjMTQ2ZjVlODkwNThkYjg3OGE4NGQxNzY5ZTc2NTY0Njc5ZTMxNmVlNGU2NmEzODk1OTY0ZDg2MTJkMjkzIiwidGFnIjoiIn0%3D",
+      "domain": "automaticityacademy.ngrok.app",
+      "path": "/",
+      "expires": 1739234836.254998,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://automaticityacademy.ngrok.app",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXV0b21hdGljaXR5YWNhZGVteS5uZ3Jvay5hcHAvYXBpL3YxL2F1dGgvbG9naW4iLCJpYXQiOjE3MzkyMjc2MzYsImV4cCI6MTczOTIzMTIzNiwibmJmIjoxNzM5MjI3NjM2LCJqdGkiOiJTNVFtTmk2bFZqTHFzdkhIIiwic3ViIjoiNzU5IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.v6dBnSkM_HvlkpYpYZuhaPi_Ny4G5qRGc17fIlTXrFA"
+        },
+        {
+          "name": "cartId",
+          "value": "759"
+        },
+        {
+          "name": "userId",
+          "value": "759"
+        },
+        {
+          "name": "persist:root",
+          "value": "{\"userApi\":\"{\\\"queries\\\":{},\\\"mutations\\\":{},\\\"provided\\\":{},\\\"subscriptions\\\":{},\\\"config\\\":{\\\"online\\\":true,\\\"focused\\\":true,\\\"middlewareRegistered\\\":true,\\\"refetchOnFocus\\\":false,\\\"refetchOnReconnect\\\":false,\\\"refetchOnMountOrArgChange\\\":false,\\\"keepUnusedDataFor\\\":60,\\\"reducerPath\\\":\\\"userApi\\\",\\\"invalidationBehavior\\\":\\\"delayed\\\"}}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
+        }
+      ]
+    }
+  ]
+}
