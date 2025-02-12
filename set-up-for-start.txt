@@ -1,4 +1,4 @@
-QA Automation - Playwright E2E Testovi. Ovaj projekat sadrži automatizovane testove za webshop pomoću Playwright-a.  
+QA task. Ovaj projekat sadrži automatizovane testove za webshop pomoću Playwright-a.  
 
 Instalacija i podešavanje. Pre nego što pokreneš testove, moraš da instaliraš sve potrebne zavisnosti.  
 
