@@ -5,7 +5,7 @@ test('Get API', async ({ page }) => {
 
     page.on('request', (request) => {
         if (request.method() === 'GET') {
-            console.log(`📡 API GET: ${request.url()}`);
+            console.log(`📡 API GET: ${request.url()}`); //otkloniti console log
         }
     });
 
@@ -15,3 +15,15 @@ test('Get API', async ({ page }) => {
     await page.waitForSelector('#search');
 });
 
+mapraviti .gitignore za test-results
+dodati ovde expect 
+
+micemo api
+
+test.describe.parallel('Login tests', () => {}
+
+dodavanja vise expexta posle svakog logina ili klika
+
+constante napraviti novi fajl
+
+srpski izbaciti u potpunosti
