@@ -85,6 +85,3 @@ npx playwright show-report
 ---
 
 ### 🎯 **You're all set!** Run your tests and improve your automation suite! 🚀
-```
-
-Sada možeš **samo kopirati ovo i sačuvati kao `README.md` u svom projektu**. ✅
