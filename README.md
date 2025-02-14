@@ -1,25 +1,90 @@
-QA task. Ovaj projekat sadrži automatizovane testove za webshop pomoću Playwright-a.  
+ ```md
+# QA Test Automation Project
 
-Instalacija i podešavanje. Pre nego što pokreneš testove, moraš da instaliraš sve potrebne zavisnosti.  
+This repository contains automated tests written using [Playwright](https://playwright.dev/).
 
-Prvo kloniraj repozitorijum komandom `git clone https://github.com/MarkoSpasojevic99/QA-task.git` i zatim uđi u direktorijum `cd QA-task`.  
+## 📥 Clone the repository
 
-Zatim instaliraj potrebne zavisnosti komandom `npm install`.  
+To get started, clone this repository from GitHub:
 
-Pokretanje testova. Da pokreneš sve testove koristi `npx playwright test`.  
+```sh
+git clone <repository-url>
+```
 
-Ako želiš da pokreneš samo određeni test, koristi ime fajla koji zelis pokrenuti `npx playwright test tests/e2e.test.js`. Ovde je dat primer za pokretanje fajla e2e.test.js . 
+Replace `<repository-url>` with the actual GitHub repository URL.
 
-Za pokretanje testova u debug režimu koristi `npx playwright test --debug`. Ukoliko zelis zaseban fajl da pokrenes u debug režimu `npx playwright test tests/e2e.test.js --debug` gde je e2e.test.js primer kao u proslom slucaju.
+## 📂 Navigate to the project directory
 
-Ako želiš da testove pokreneš u vidljivom browseru koristi `npx playwright test --headed`.  Ukoliko zelis zaseban fajl da pokrenes u debug režimu `npx playwright test tests/e2e.test.js --headed`, ito kao i do sada e2e.test.js je samo primer jednog od fajlova koje mozemo pokrenuti.
+After cloning, enter the project directory:
 
-Dodatne komande.  
+```sh
+cd qa-test
+```
 
-Za generisanje HTML izveštaja koristi `npx playwright show-report`.  
+## 📦 Install dependencies
 
-Ako je potrebno ponovo instalirati Playwright browser koristi `npx playwright install`.  
+Install Node.js dependencies, including Playwright:
 
-Podešavanje testova. Ako želiš da menjaš postavke testova, pogledaj fajl `playwright.config.js` i prilagodi ga prema potrebama.  
+```sh
+npm install
+```
 
-Autor: Marko Spasojević. Kontakt email: markospasojevic99@gmail.com.
+Install Playwright browsers:
+
+```sh
+npx playwright install
+```
+
+## 🚀 Run tests
+
+### Run all tests
+To execute all Playwright tests:
+
+```sh
+npx playwright test
+```
+
+### Run a specific test file
+
+If you want to run only one test file, use:
+
+```sh
+npx playwright test tests/e2e.test.js
+```
+
+### Run a specific test case
+
+To execute a single test case by name:
+
+```sh
+npx playwright test -g "Email Already Taken"
+```
+
+### Run tests in headed mode
+
+To see the browser while tests are running:
+
+```sh
+npx playwright test --headed
+```
+
+## 📊 View test results
+
+After running tests, you can generate an HTML report:
+
+```sh
+npx playwright show-report
+```
+
+## 📌 Additional Notes
+
+- **Test files** are stored in the `tests/` directory.
+- **Test results** are stored in the `test-results/` directory.
+- Configuration files like `package.json` and `.gitignore` are in the root directory.
+
+---
+
+### 🎯 **You're all set!** Run your tests and improve your automation suite! 🚀
+```
+
+Sada možeš **samo kopirati ovo i sačuvati kao `README.md` u svom projektu**. ✅
