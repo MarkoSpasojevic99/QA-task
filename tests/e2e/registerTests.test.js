@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const config = require('./const');
+const config = require('../const');
 
 test.describe.parallel('Login and Logout Tests', () => {
     
@@ -54,8 +54,8 @@ test.describe.parallel('Login and Logout Tests', () => {
         await expect(page.locator(`text=${config.ERROR_MESSAGES.USERNAME_REQUIRED}`)).toBeVisible();
     });
 
-    test('✅ Successful registration test', async ({ page }) => {
-        //podaci o korisniku prilikom registracije se moraju svaki put prilikom testiranja menjati (trenutni podaci su vec izmenjeni)
+    test('Successful registration test', async ({ page }) => {
+        // User registration data must be changed each time during testing (current data has already been modified)
         await page.goto(config.REGISTER_URL);
         await page.fill('#username', 'marko9563359');
         await page.fill('#email', 'novi.korisnik1258@gmail.com');

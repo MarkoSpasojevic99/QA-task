@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
-const config = require('./const');
+const config = require('../const');
 
 test('Cover Flow - Random Available Product', async ({ page }) => {
     await page.goto(config.LOGIN_URL);
-    await page.fill('#email', config.USER_CREDENTIALS.EMAIL); 
-    await page.fill('#password', config.USER_CREDENTIALS.PASSWORD); 
+    await page.fill('#email', config.USER_CREDENTIALS.EMAIL);
+    await page.fill('#password', config.USER_CREDENTIALS.PASSWORD);
     await page.click('span:has-text("Sign in")');
 
     await expect(page).toHaveURL(config.DASHBOARD_URL);
@@ -61,7 +61,7 @@ test('Cover Flow - Random Available Product', async ({ page }) => {
        const step3 = page.locator('div.animate-bounce:has-text("3")');
        await expect(step3).toBeVisible();
    
-       await page.click('span:has-text("Next step")');  // ne popunjavamo karticne podatke zato sto ce nam dugme next step posle popunjavanja biti onemoguceno
+       await page.click('span:has-text("Next step")');  // We do not fill in the card details because the "Next step" button will be disabled after entering them.
    
        const step4 = page.locator('div.animate-bounce:has-text("4")');
        await expect(step4).toBeVisible();
@@ -71,11 +71,10 @@ test('Cover Flow - Random Available Product', async ({ page }) => {
    
        await page.goto(config.DASHBOARD_URL);
    
-       await page.waitForSelector('svg.w-8.h-16'); 
+       await page.waitForSelector('svg.w-8.h-16');
        await page.click('svg.w-8.h-16');
        await page.waitForSelector('button:has-text("Log Out")');
        await page.click('button:has-text("Log Out")');
        await expect(page).toHaveURL(config.BASE_URL);
    });
-   
    

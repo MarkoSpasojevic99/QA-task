@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const config = require('./const');
+const config = require('../const');
 
 test.describe.parallel('Login and Logout Tests', () => {
     
@@ -7,8 +7,8 @@ test.describe.parallel('Login and Logout Tests', () => {
         await page.goto(config.LOGIN_URL);
         await page.waitForSelector('#email');
         await page.waitForSelector('#password');
-        await page.fill('#email', config.USER_CREDENTIALS.EMAIL); 
-        await page.fill('#password', config.USER_CREDENTIALS.PASSWORD); 
+        await page.fill('#email', config.USER_CREDENTIALS.EMAIL);
+        await page.fill('#password', config.USER_CREDENTIALS.PASSWORD);
         await page.click('span:has-text("Sign in")');
         await page.waitForSelector('#search');
         await page.waitForSelector('svg.w-8.h-16');
@@ -43,8 +43,8 @@ test.describe.parallel('Login and Logout Tests', () => {
         await page.goto(config.LOGIN_URL);
         await page.waitForSelector('#email');
         await page.waitForSelector('#password');
-        await page.fill('#email', config.USER_CREDENTIALS.EMAIL); 
-        await page.fill('#password', config.USER_CREDENTIALS.PASSWORD); 
+        await page.fill('#email', config.USER_CREDENTIALS.EMAIL);
+        await page.fill('#password', config.USER_CREDENTIALS.PASSWORD);
         await page.click('span:has-text("Sign in")');
         await page.waitForSelector('#search');
         await expect(page).toHaveURL(config.DASHBOARD_URL);
@@ -55,10 +55,9 @@ test.describe.parallel('Login and Logout Tests', () => {
         await page.goto(config.LOGIN_URL);
         await page.waitForSelector('#email');
         await page.waitForSelector('#password');
-        await page.fill('#email', config.USER_CREDENTIALS.EMAIL); 
+        await page.fill('#email', config.USER_CREDENTIALS.EMAIL);
         await page.fill('#password', '12345678');
         await page.click('span:has-text("Sign in")');
         await expect(page.locator('text=The email address or password you entered is invalid')).toBeVisible();
     });
-    
 });

@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const config = require('./const');
+const config = require('../const');
 
 test('E2E - Cart and Checkout Process with Random Items', async ({ page }) => {
     await page.goto(config.LOGIN_URL);
@@ -30,7 +30,7 @@ test('E2E - Cart and Checkout Process with Random Items', async ({ page }) => {
 
     for (const product of selectedProducts) {
         const productName = await product.locator('h1.text-sm.line-clamp-2.tracking-tight').textContent();
-        
+
         if (!productName) {
             continue;
         }
@@ -110,7 +110,7 @@ test('E2E - Cart and Checkout Process with Random Items', async ({ page }) => {
 
     await page.goto(config.DASHBOARD_URL);
 
-    await page.waitForSelector('svg.w-8.h-16'); 
+    await page.waitForSelector('svg.w-8.h-16');
     await page.click('svg.w-8.h-16');
     await page.waitForSelector('button:has-text("Log Out")');
     await page.click('button:has-text("Log Out")');
