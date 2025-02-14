@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const config = require('../const');
 
-test('E2E - Cart and Checkout Process with Random Items', async ({ page }) => {
+test('E2E', async ({ page }) => {
     await page.goto(config.LOGIN_URL);
     await expect(page).toHaveURL(config.LOGIN_URL);
 
